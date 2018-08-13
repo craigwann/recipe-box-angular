@@ -1,12 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<div class="jumbotron">
+  <h1>
+    {{title}}
+  </h1>
+</div>
 
-  <div *ngFor="let currentRecipe of recipes">
+
+  <div class="card" style="width: 300px; height: 400px;" *ngFor="let currentRecipe of recipes">
     <h2>{{currentRecipe.title}}</h2>
     <h4>Ingredients</h4>
     <ul>
-      <!-- <li>{{currentRecipe.ingredients}}</li -->
       <li *ngFor="let ingredient of currentRecipe.ingredients">{{ingredient}}</li>
     </ul>
     <h4>Directions</h4>
